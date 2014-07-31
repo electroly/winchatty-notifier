@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RBProject version="2014r2" FormatVersion="2" MinIDEVersion="20070100">
+<block type="Module" ID="1708963839">
+ <ObjName>UIUtilities</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>0</IsClass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Method>
+  <ItemName>AutoResize</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub AutoResize(extends btn as PushButton)</SourceLine>
+   <SourceLine>#if TargetMacOS then</SourceLine>
+   <SourceLine>btn.Height = btn.Height + 4</SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>extends btn as PushButton</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>AlignRightButtonBar</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub AlignRightButtonBar(extends wnd as Window, ParamArray buttons() as PushButton)</SourceLine>
+   <SourceLine>dim i as integer</SourceLine>
+   <SourceLine>dim spacing as integer = 7</SourceLine>
+   <SourceLine>dim x as integer = buttons(buttons.Ubound).Left + buttons(buttons.Ubound).Width</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>#if TargetMacOS then</SourceLine>
+   <SourceLine>spacing = 7</SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>#if TargetMacOS or TargetLinux then</SourceLine>
+   <SourceLine>' Reverse the order of the buttons.  On Mac and Linux, the default button goes on the right.</SourceLine>
+   <SourceLine>for i = 0 to buttons.Ubound</SourceLine>
+   <SourceLine>dim item as PushButton</SourceLine>
+   <SourceLine>item = buttons.Pop()</SourceLine>
+   <SourceLine>buttons.Insert i, item</SourceLine>
+   <SourceLine>next</SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>for i = buttons.Ubound to 0 step -1</SourceLine>
+   <SourceLine>buttons(i).AutoResize</SourceLine>
+   <SourceLine>buttons(i).Left = x - buttons(i).Width</SourceLine>
+   <SourceLine>x = x - buttons(i).Width - spacing</SourceLine>
+   <SourceLine>next</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>extends wnd as Window, ParamArray buttons() as PushButton</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>ApplyPlatformScaling</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub ApplyPlatformScaling(extends wnd as Window)</SourceLine>
+   <SourceLine>#if TargetWin32 then</SourceLine>
+   <SourceLine>return ' We're designed for Win32 by default.</SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>dim xFactor as double = 1</SourceLine>
+   <SourceLine>dim yFactor as double = 1</SourceLine>
+   <SourceLine>dim buttonMinHeight as integer = 0</SourceLine>
+   <SourceLine>dim i as integer</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>#if TargetMacOS then</SourceLine>
+   <SourceLine>xFactor = 1.23</SourceLine>
+   <SourceLine>yFactor = 1</SourceLine>
+   <SourceLine>buttonMinHeight = 24</SourceLine>
+   <SourceLine>#elseif TargetLinux then</SourceLine>
+   <SourceLine>xFactor = 1.3</SourceLine>
+   <SourceLine>yFactor = 1.35</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>dim fontSize as single = 11</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>for i = 0 to wnd.ControlCount - 1</SourceLine>
+   <SourceLine>if wnd.Control(i) isa BevelButton then BevelButton(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa Checkbox then Checkbox(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa GroupBox then GroupBox(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa Label then Label(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa ListBox then ListBox(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa PopupMenu then PopupMenu(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa PushButton then PushButton(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa RadioButton then RadioButton(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa TextEdit then TextEdit(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>if wnd.Control(i) isa TabPanel then TabPanel(wnd.Control(i)).TextSize = fontSize</SourceLine>
+   <SourceLine>next</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>dim lockTop() as boolean</SourceLine>
+   <SourceLine>dim lockLeft() as boolean</SourceLine>
+   <SourceLine>dim lockRight() as boolean</SourceLine>
+   <SourceLine>dim lockBottom() as boolean</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>for i = 0 to wnd.ControlCount - 1</SourceLine>
+   <SourceLine>if wnd.Control(i) isa RectControl then</SourceLine>
+   <SourceLine>dim ctl as RectControl = RectControl(wnd.Control(i))</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>lockTop.Append ctl.LockTop</SourceLine>
+   <SourceLine>lockLeft.Append ctl.LockLeft</SourceLine>
+   <SourceLine>lockRight.Append ctl.LockRight</SourceLine>
+   <SourceLine>lockBottom.Append ctl.LockBottom</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ctl.LockTop = false</SourceLine>
+   <SourceLine>ctl.LockLeft = false</SourceLine>
+   <SourceLine>ctl.LockRight = false</SourceLine>
+   <SourceLine>ctl.LockBottom = false</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>dim adjustX, adjustY as integer = 0</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>if ctl isa Canvas and Canvas(ctl).Backdrop &lt;&gt; nil then</SourceLine>
+   <SourceLine>adjustX = ctl.Width * (xFactor - 1) / 2</SourceLine>
+   <SourceLine>adjustY = ctl.Height * (yFactor - 1) / 2</SourceLine>
+   <SourceLine>end if</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>'if ctl.Parent = nil then</SourceLine>
+   <SourceLine>ctl.Left = ctl.Left * xFactor + adjustX</SourceLine>
+   <SourceLine>ctl.Top = ctl.Top * yFactor + adjustY</SourceLine>
+   <SourceLine>'end if</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>ctl.Width = ctl.Width * xFactor</SourceLine>
+   <SourceLine>ctl.Height = ctl.Height * yFactor</SourceLine>
+   <SourceLine>end if</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>if wnd.Control(i) isa PushButton then</SourceLine>
+   <SourceLine>dim btn as Pushbutton = PushButton(wnd.Control(i))</SourceLine>
+   <SourceLine>btn.Height = Max(btn.Height, buttonMinHeight)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>#if TargetMacOS then</SourceLine>
+   <SourceLine>btn.Left = btn.Left - 6</SourceLine>
+   <SourceLine>btn.Width = btn.Width + 12</SourceLine>
+   <SourceLine>btn.Top = btn.Top - 1</SourceLine>
+   <SourceLine>btn.Height = btn.Height + 1</SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine>end if</SourceLine>
+   <SourceLine>next</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>wnd.Width = wnd.Width * xFactor</SourceLine>
+   <SourceLine>wnd.Height = wnd.Height * yFactor</SourceLine>
+   <SourceLine>dim j as integer = 0</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>for i = 0 to wnd.ControlCount - 1</SourceLine>
+   <SourceLine>if wnd.Control(i) isa RectControl then</SourceLine>
+   <SourceLine>dim ctl as RectControl = RectControl(wnd.Control(i))</SourceLine>
+   <SourceLine>ctl.LockTop = lockTop(j)</SourceLine>
+   <SourceLine>ctl.LockLeft = lockLeft(j)</SourceLine>
+   <SourceLine>ctl.LockRight = lockRight(j)</SourceLine>
+   <SourceLine>ctl.LockBottom = lockBottom(j)</SourceLine>
+   <SourceLine>j = j + 1</SourceLine>
+   <SourceLine>end if</SourceLine>
+   <SourceLine>next</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>extends wnd as Window</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>ApplyPlatformAlignment</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub ApplyPlatformAlignment(extends label as Label)</SourceLine>
+   <SourceLine>#if TargetMacOS then</SourceLine>
+   <SourceLine>label.TextAlign = Label.AlignRight</SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>extends label as Label</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+</RBProject>
