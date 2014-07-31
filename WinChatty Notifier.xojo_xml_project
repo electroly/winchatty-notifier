@@ -12,12 +12,12 @@
  <LongVersion></LongVersion>
  <InfoVersion></InfoVersion>
  <AutoIncVersion>0</AutoIncVersion>
- <DefaultViewID>1592786943</DefaultViewID>
+ <DefaultViewID>0</DefaultViewID>
  <ProjectType>0</ProjectType>
  <DefaultLanguage>0</DefaultLanguage>
  <CurrentLanguage>0</CurrentLanguage>
  <DefaultEncoding>0</DefaultEncoding>
- <BuildFlags>18688</BuildFlags>
+ <BuildFlags>26880</BuildFlags>
  <UseBuildsFolder>1</UseBuildsFolder>
  <WebApp>0</WebApp>
  <Icon>
@@ -36,266 +36,6 @@
  <UseGDIPlus>0</UseGDIPlus>
  <BuildLinuxX86Name>WinChatty Notifier</BuildLinuxX86Name>
  <DebuggerCommandLine></DebuggerCommandLine>
-</block>
-<block type="Window" ID="1592786943">
- <ObjName>Window1</ObjName>
- <ObjContainerID>0</ObjContainerID>
- <IsClass>1</IsClass>
- <Superclass>Window</Superclass>
- <ItemFlags>1</ItemFlags>
- <IsInterface>0</IsInterface>
- <Compatibility></Compatibility>
- <PropertyVal Name="ImplicitInstance">True</PropertyVal>
- <PropertyVal Name="MenuBar">829896703</PropertyVal>
- <PropertyVal Name="MacProcID"><Hex bytes="1">30</Hex></PropertyVal>
- <PropertyVal Name="FullScreenButton">False</PropertyVal>
- <PropertyVal Name="MinimizeButton">True</PropertyVal>
- <PropertyVal Name="MaximizeButton">True</PropertyVal>
- <PropertyVal Name="LiveResize">True</PropertyVal>
- <PropertyVal Name="Resizeable">True</PropertyVal>
- <PropertyVal Name="CloseButton">True</PropertyVal>
- <PropertyVal Name="MenuBarVisible">True</PropertyVal>
- <PropertyVal Name="FullScreen">False</PropertyVal>
- <PropertyVal Name="Visible">True</PropertyVal>
- <PropertyVal Name="Title">Untitled</PropertyVal>
- <PropertyVal Name="Backdrop">0</PropertyVal>
- <PropertyVal Name="BackColor">16777215</PropertyVal>
- <PropertyVal Name="HasBackColor">False</PropertyVal>
- <PropertyVal Name="Composite">False</PropertyVal>
- <PropertyVal Name="Frame"><Hex bytes="1">30</Hex></PropertyVal>
- <PropertyVal Name="MaxHeight">32000</PropertyVal>
- <PropertyVal Name="MaxWidth">32000</PropertyVal>
- <PropertyVal Name="MinHeight">64</PropertyVal>
- <PropertyVal Name="MinWidth">64</PropertyVal>
- <PropertyVal Name="Height">164</PropertyVal>
- <PropertyVal Name="Width">290</PropertyVal>
- <PropertyVal Name="Placement"><Hex bytes="1">30</Hex></PropertyVal>
- <ViewBehavior>
-  <ViewProperty>
-   <ObjName>Name</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>ID</PropertyGroup>
-   <ItemType>String</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Interfaces</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>ID</PropertyGroup>
-   <ItemType>String</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Super</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>ID</PropertyGroup>
-   <ItemType>String</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Placement</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Position</PropertyGroup>
-   <PropertyValue>0</PropertyValue>
-   <ItemType>Integer</ItemType>
-   <EditorType>Enum</EditorType>
-   <Enumeration>
-    <ItemDef>0 - Default</ItemDef>
-    <ItemDef>1 - Parent Window</ItemDef>
-    <ItemDef>2 - Main Screen</ItemDef>
-    <ItemDef>3 - Parent Window Screen</ItemDef>
-    <ItemDef>4 - Stagger</ItemDef>
-   </Enumeration>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Width</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Position</PropertyGroup>
-   <PropertyValue>600</PropertyValue>
-   <ItemType>Integer</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Height</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Position</PropertyGroup>
-   <PropertyValue>400</PropertyValue>
-   <ItemType>Integer</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MinWidth</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Position</PropertyGroup>
-   <PropertyValue>64</PropertyValue>
-   <ItemType>Integer</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MinHeight</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Position</PropertyGroup>
-   <PropertyValue>64</PropertyValue>
-   <ItemType>Integer</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MaxWidth</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Position</PropertyGroup>
-   <PropertyValue>32000</PropertyValue>
-   <ItemType>Integer</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MaxHeight</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Position</PropertyGroup>
-   <PropertyValue>32000</PropertyValue>
-   <ItemType>Integer</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Frame</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>0</PropertyValue>
-   <ItemType>Integer</ItemType>
-   <EditorType>Enum</EditorType>
-   <Enumeration>
-    <ItemDef>0 - Document</ItemDef>
-    <ItemDef>1 - Movable Modal</ItemDef>
-    <ItemDef>2 - Modal Dialog</ItemDef>
-    <ItemDef>3 - Floating Window</ItemDef>
-    <ItemDef>4 - Plain Box</ItemDef>
-    <ItemDef>5 - Shadowed Box</ItemDef>
-    <ItemDef>6 - Rounded Window</ItemDef>
-    <ItemDef>7 - Global Floating Window</ItemDef>
-    <ItemDef>8 - Sheet Window</ItemDef>
-    <ItemDef>9 - Metal Window</ItemDef>
-    <ItemDef>10 - Drawer Window</ItemDef>
-    <ItemDef>11 - Modeless Dialog</ItemDef>
-   </Enumeration>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Composite</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>False</PropertyValue>
-   <ItemType>Boolean</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>HasBackColor</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>False</PropertyValue>
-   <ItemType>Boolean</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>BackColor</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>&amp;hFFFFFF</PropertyValue>
-   <ItemType>Color</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Backdrop</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <ItemType>Picture</ItemType>
-   <EditorType>Picture</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Title</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>Untitled</PropertyValue>
-   <ItemType>String</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Visible</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>True</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>FullScreen</ObjName>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>False</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MenuBarVisible</ObjName>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>True</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>CloseButton</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>True</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>Resizeable</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>True</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>LiveResize</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>True</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MaximizeButton</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>True</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MinimizeButton</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>True</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>FullScreenButton</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>False</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MacProcID</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>0</PropertyValue>
-   <ItemType>Integer</ItemType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>MenuBar</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <ItemType>MenuBar</ItemType>
-   <EditorType>MenuBar</EditorType>
-  </ViewProperty>
-  <ViewProperty>
-   <ObjName>ImplicitInstance</ObjName>
-   <Visible>1</Visible>
-   <PropertyGroup>Appearance</PropertyGroup>
-   <PropertyValue>True</PropertyValue>
-   <ItemType>Boolean</ItemType>
-   <EditorType>Boolean</EditorType>
-  </ViewProperty>
- </ViewBehavior>
 </block>
 <block type="Menu" ID="829896703">
  <ObjName>MainMenuBar</ObjName>
@@ -480,6 +220,52 @@
  <ItemFlags>1</ItemFlags>
  <IsInterface>0</IsInterface>
  <Compatibility></Compatibility>
+ <HookInstance>
+  <ItemName>Action</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Action(cause as Integer)</SourceLine>
+   <SourceLine>if cause = TrayItem.LeftMouseButton or cause = TrayItem.DoubleClick then</SourceLine>
+   <SourceLine> DoConfigure</SourceLine>
+   <SourceLine>elseif cause = TrayItem.RightMouseButton then</SourceLine>
+   <SourceLine>Dim trayMenu as new MenuItem</SourceLine>
+   <SourceLine>trayMenu.Append (new MenuItem("Configure..."))</SourceLine>
+   <SourceLine>trayMenu.Append (new MenuItem("Exit"))</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Dim result as MenuItem = trayMenu.PopUp</SourceLine>
+   <SourceLine>if result = nil then return</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>select case result.Text</SourceLine>
+   <SourceLine>case "Configure..."</SourceLine>
+   <SourceLine>DoConfigure</SourceLine>
+   <SourceLine>case "Exit"</SourceLine>
+   <SourceLine>Quit</SourceLine>
+   <SourceLine>end select</SourceLine>
+   <SourceLine>end if</SourceLine>
+   <SourceLine>&#32;</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <Method>
+  <ItemName>DoConfigure</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub DoConfigure()</SourceLine>
+   <SourceLine>MsgBox "hi!"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>33</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
  <ViewBehavior>
   <ViewProperty>
    <ObjName>HelpTag</ObjName>
@@ -528,19 +314,763 @@
   </ViewProperty>
  </ViewBehavior>
 </block>
-<block type="ExternalCode" ID="1053157375">
- <ObjName>UIUtilities</ObjName>
- <ObjContainerID>0</ObjContainerID>
- <FullPath>C:\Projects\winchatty-notifier\UIUtilities.xojo_xml_code</FullPath>
- <PartialPath>UIUtilities.xojo_xml_code</PartialPath>
- <SaveInfo><Hex bytes="88">00F1D1730102010000000038433A5C50726F6A656374735C77696E6368617474792D6E6F7469666965725C55495574696C69746965732E786F6A6F5F786D6C5F636F64650300000000010004000000000100000000000000</Hex></SaveInfo>
+<block type="Module" ID="940703743">
+ <ObjName>Prefs</ObjName>
+ <ObjContainerID>1179052031</ObjContainerID>
+ <IsClass>1</IsClass>
+ <ItemFlags>2</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Method>
+  <ItemName>Constructor</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Constructor(appName As String)</SourceLine>
+   <SourceLine>mPreferences = New JSONItem</SourceLine>
+   <SourceLine>mPreferences.Compact = False</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>mAppName = appName</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>appName As String</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>Get</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function Get(name As String) As Variant</SourceLine>
+   <SourceLine>// Allow lookup of preference using this syntax:</SourceLine>
+   <SourceLine>// Dim top As Integer = Preferences.Get("MainWindowTop")</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If mPreferences &lt;&gt; Nil Then</SourceLine>
+   <SourceLine>If mPreferences.HasName(name) Then</SourceLine>
+   <SourceLine>Return mPreferences.Value(name)</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>Raise New PreferenceNotFoundException(name)</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>Return -1</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>name As String</ItemParams>
+  <ItemResult>Variant</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>Load</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function Load() As Boolean</SourceLine>
+   <SourceLine>Dim prefFolder As FolderItem = SpecialFolder.ApplicationData.Child(mAppName)</SourceLine>
+   <SourceLine>If Not prefFolder.Exists Then</SourceLine>
+   <SourceLine>prefFolder.CreateAsFolder</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Dim prefName As String = mAppName + ".pref"</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>mPreferencesFile = prefFolder.Child(prefName)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If mPreferencesFile.Exists Then</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Dim input As TextInputStream</SourceLine>
+   <SourceLine>input = TextInputStream.Open(mPreferencesFile)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Dim data As String = input.ReadAll</SourceLine>
+   <SourceLine>input.Close</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Try</SourceLine>
+   <SourceLine>mPreferences.Load(data)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return True</SourceLine>
+   <SourceLine>Catch e As JSONException</SourceLine>
+   <SourceLine>Return False</SourceLine>
+   <SourceLine>End Try</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>Return False</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult>Boolean</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>Operator_Lookup</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function Operator_Lookup(name As String) As Variant</SourceLine>
+   <SourceLine>// Allow lookup of preference using this syntax:</SourceLine>
+   <SourceLine>// Dim top As Integer = Preferences.MainWindowTop</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return Get(name)</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>name As String</ItemParams>
+  <ItemResult>Variant</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>Operator_Lookup</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Operator_Lookup(name As String, Assigns value As Variant)</SourceLine>
+   <SourceLine>// Set a preference using this syntax:</SourceLine>
+   <SourceLine>// Preferences.MainWindowTop = 345</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Set(name) = value</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>name As String, Assigns value As Variant</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Method>
+  <ItemName>Save</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function Save() As Boolean</SourceLine>
+   <SourceLine>If mPreferencesFile &lt;&gt; Nil Then</SourceLine>
+   <SourceLine>Dim data As String = mPreferences.ToString</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Try</SourceLine>
+   <SourceLine>Dim output As TextOutputStream</SourceLine>
+   <SourceLine>output = TextOutputStream.Create(mPreferencesFile)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>output.Write(data)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return True</SourceLine>
+   <SourceLine>Catch e As IOException</SourceLine>
+   <SourceLine>Return False</SourceLine>
+   <SourceLine>End Try</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult>Boolean</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>Set</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Set(name As String, Assigns value As Variant)</SourceLine>
+   <SourceLine>If mPreferences &lt;&gt; Nil Then</SourceLine>
+   <SourceLine>// Set a preference using this syntax:</SourceLine>
+   <SourceLine>// Preferences.Set("MainWindowTop") = 345</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>mPreferences.Value(name) = value</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>name As String, Assigns value As Variant</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Property>
+  <ItemName>mPreferences</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>mPreferences As JSONItem</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>mPreferences As JSONItem</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>mPreferencesFile</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>mPreferencesFile As FolderItem</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>mPreferencesFile As FolderItem</ItemDeclaration>
+  <ItemFlags>33</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <Property>
+  <ItemName>mAppName</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>mAppName As String</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>mAppName As String</ItemDeclaration>
+  <ItemFlags>33</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
 </block>
-<block type="ExternalCode" ID="1321332735">
+<block type="Module" ID="624529407">
+ <ObjName>PreferenceNotFoundException</ObjName>
+ <ObjContainerID>1179052031</ObjContainerID>
+ <IsClass>1</IsClass>
+ <Superclass>RuntimeException</Superclass>
+ <ItemFlags>2</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Method>
+  <ItemName>Constructor</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Constructor(name As String)</SourceLine>
+   <SourceLine>Self.Message = "Preference value '" + name + "' does not exist."</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>4096</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>name As String</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>ErrorNumber</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Message</ObjName>
+   <PropertyGroup>Behavior</PropertyGroup>
+   <ItemType>String</ItemType>
+   <EditorType>MultiLineEditor</EditorType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="1179052031">
+ <ObjName>PreferencesModule</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>0</IsClass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Method>
+  <ItemName>Initialize</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Initialize(appName As String)</SourceLine>
+   <SourceLine>Preferences = New Prefs(appName)</SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>1</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>appName As String</ItemParams>
+  <ItemResult></ItemResult>
+ </Method>
+ <Note>
+  <ItemName>Documentation</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <NoteLine>Documentation</NoteLine>
+   <NoteLine>Manages your local application preferences.  Preferences are loaded and saved</NoteLine>
+   <NoteLine>automatically.</NoteLine>
+   <NoteLine></NoteLine>
+   <NoteLine>Usage:</NoteLine>
+   <NoteLine></NoteLine>
+   <NoteLine>In your App.Open event, call PreferencesModule.Initialize("MyAppName")</NoteLine>
+   <NoteLine>before using the PreferencesModule</NoteLine>
+   <NoteLine></NoteLine>
+   <NoteLine>Preferences.Load loads your preferences</NoteLine>
+   <NoteLine>Preferences.Save saves your preferences</NoteLine>
+   <NoteLine></NoteLine>
+   <NoteLine>To assign preferences values:</NoteLine>
+   <NoteLine></NoteLine>
+   <NoteLine>Preferences.PrefName = value Or Preferences.Set("PrefName") = value</NoteLine>
+   <NoteLine>value = Preferences.PrefName Or value = Preferences.Get("PrefName")</NoteLine>
+   <NoteLine></NoteLine>
+   <NoteLine>If you attempt to access a preference that does not exist, a</NoteLine>
+   <NoteLine>PreferenceNotFoundException is raised.</NoteLine>
+   <NoteLine></NoteLine>
+  </ItemSource>
+  <ItemFlags>0</ItemFlags>
+ </Note>
+ <Property>
+  <ItemName>Preferences</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Preferences As Prefs</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>Preferences As Prefs</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="-1125843114">
+ <ObjName>UUID</ObjName>
+ <ObjContainerID>0</ObjContainerID>
+ <IsClass>0</IsClass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <Compatibility></Compatibility>
+ <Method>
+  <ItemName>NewUUID</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function NewUUID() As String</SourceLine>
+   <SourceLine>'Creates a Universally Unique Identifier. </SourceLine>
+   <SourceLine>'This method creates its UUID using only RB framework</SourceLine>
+   <SourceLine>'methods. The resulting UUID is 36 bytes in length.</SourceLine>
+   <SourceLine>'</SourceLine>
+   <SourceLine>'For this method to fail there would have to be two machines with</SourceLine>
+   <SourceLine>'identical MAC addresses, clock times, boot times, and random number</SourceLine>
+   <SourceLine>'generators (motherboard device). The odds are extremely small that this</SourceLine>
+   <SourceLine>'could ever occur, and in fact should never occur with network machines. </SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>'Variables</SourceLine>
+   <SourceLine>Dim Block As MemoryBlock</SourceLine>
+   <SourceLine>Block = NewMemoryBlock(36)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>'Uniqueness in space - machine MAC address, 12 bytes.</SourceLine>
+   <SourceLine>Dim nic As NetworkInterface</SourceLine>
+   <SourceLine>Dim mac As String</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>If System.NetworkInterfaceCount &gt; 0 Then</SourceLine>
+   <SourceLine>nic = System.GetNetworkInterface(0)</SourceLine>
+   <SourceLine>mac = nic.MACAddress</SourceLine>
+   <SourceLine>mac = ReplaceAll(mac, ":", "")</SourceLine>
+   <SourceLine>Block.StringValue(0, 12) = mac</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>'If there's no network interface, a random number is better than nothing.</SourceLine>
+   <SourceLine>'Note that the last 4 bytes of the second Rnd will be overwritten.</SourceLine>
+   <SourceLine>Block.DoubleValue(0) = Rnd</SourceLine>
+   <SourceLine>Block.DoubleValue(8) = Rnd</SourceLine>
+   <SourceLine>End If</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>'Uniqueness in time - TotalSeconds + machine Microseconds.</SourceLine>
+   <SourceLine>'TotalSeconds, 8 bytes.</SourceLine>
+   <SourceLine>Dim DateTime As Date = New Date</SourceLine>
+   <SourceLine>Block.DoubleValue(12) = DateTime.TotalSeconds</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>'Microseconds, which is based on boot time, 8 bytes.</SourceLine>
+   <SourceLine>Block.DoubleValue(20) = Microseconds</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>'Further uniqueness in space/time - random number generated by</SourceLine>
+   <SourceLine>'motherboard (space) based on boot time and seed, 8 bytes.</SourceLine>
+   <SourceLine>Block.DoubleValue(28) = Rnd</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>'Get UUID.</SourceLine>
+   <SourceLine>Return Block.StringValue(0, 36)</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>NewFileSafeUUID</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function NewFileSafeUUID() As String</SourceLine>
+   <SourceLine>'Returns a UUID that only uses characters safe for</SourceLine>
+   <SourceLine>'file names on Windows. The only non-safe character</SourceLine>
+   <SourceLine>'in a Base64UUID is /. This is converted to a dash -</SourceLine>
+   <SourceLine>'Size stays the same at 48 bytes.</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Dim ID As String</SourceLine>
+   <SourceLine>ID = NewBase64UUID</SourceLine>
+   <SourceLine>ID = ReplaceAll(ID, "/", "-")</SourceLine>
+   <SourceLine>Return ID</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <Method>
+  <ItemName>NewBase64UUID</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function NewBase64UUID() As String</SourceLine>
+   <SourceLine>'Returns a UUID in Base64 format. New length is 48 bytes.</SourceLine>
+   <SourceLine>Return EncodeBase64(NewUUID)</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams></ItemParams>
+  <ItemResult>String</ItemResult>
+ </Method>
+ <Note>
+  <ItemName>License</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <NoteLine>License</NoteLine>
+   <NoteLine>'* Copyright (c) 2007, Taylor Design</NoteLine>
+   <NoteLine>'* All rights reserved.</NoteLine>
+   <NoteLine>'*</NoteLine>
+   <NoteLine>'* Redistribution and use in source and binary forms, with or without</NoteLine>
+   <NoteLine>'* modification, are permitted provided that the following conditions are met:</NoteLine>
+   <NoteLine>'*     * Redistributions of source code must retain the above copyright</NoteLine>
+   <NoteLine>'*       notice, this list of conditions and the following disclaimer.</NoteLine>
+   <NoteLine>'*     * Redistributions in binary form must reproduce the above copyright</NoteLine>
+   <NoteLine>'*       notice, this list of conditions and the following disclaimer in the</NoteLine>
+   <NoteLine>'*       documentation and/or other materials provided with the distribution.</NoteLine>
+   <NoteLine>'*     * Neither the name of the company nor the</NoteLine>
+   <NoteLine>'*       names of its contributors may be used to endorse or promote products</NoteLine>
+   <NoteLine>'*       derived from this software without specific prior written permission.</NoteLine>
+   <NoteLine>'*</NoteLine>
+   <NoteLine>'* THIS SOFTWARE IS PROVIDED BY Taylor Design ``AS IS'' AND ANY</NoteLine>
+   <NoteLine>'* EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED</NoteLine>
+   <NoteLine>'* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE</NoteLine>
+   <NoteLine>'* DISCLAIMED. IN NO EVENT SHALL Taylor Design BE LIABLE FOR ANY</NoteLine>
+   <NoteLine>'* DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</NoteLine>
+   <NoteLine>'* (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</NoteLine>
+   <NoteLine>'* LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</NoteLine>
+   <NoteLine>'* ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</NoteLine>
+   <NoteLine>'* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</NoteLine>
+   <NoteLine>'* SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</NoteLine>
+  </ItemSource>
+  <ItemFlags>0</ItemFlags>
+ </Note>
+ <ViewBehavior>
+  <ViewProperty>
+   <ObjName>Name</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Index</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <PropertyValue>-2147483648</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Super</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>ID</PropertyGroup>
+   <ItemType>String</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Left</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+  <ViewProperty>
+   <ObjName>Top</ObjName>
+   <Visible>1</Visible>
+   <PropertyGroup>Position</PropertyGroup>
+   <PropertyValue>0</PropertyValue>
+   <ItemType>Integer</ItemType>
+  </ViewProperty>
+ </ViewBehavior>
+</block>
+<block type="Module" ID="1535295487">
  <ObjName>App</ObjName>
  <ObjContainerID>0</ObjContainerID>
- <FullPath>C:\Projects\winchatty-notifier\App.xojo_xml_code</FullPath>
- <PartialPath>App.xojo_xml_code</PartialPath>
- <SaveInfo><Hex bytes="80">00F1D1730102010000000030433A5C50726F6A656374735C77696E6368617474792D6E6F7469666965725C4170702E786F6A6F5F786D6C5F636F64650300000000010004000000000100000000000000</Hex></SaveInfo>
+ <IsClass>1</IsClass>
+ <Superclass>Application</Superclass>
+ <ItemFlags>1</ItemFlags>
+ <IsInterface>0</IsInterface>
+ <IsApplicationObject>1</IsApplicationObject>
+ <Compatibility></Compatibility>
+ <HookInstance>
+  <ItemName>Open</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Open()</SourceLine>
+   <SourceLine>AutoQuit = false</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>PreferencesModule.Initialize "WinChattyNotifier"</SourceLine>
+   <SourceLine>if not Preferences.Load then</SourceLine>
+   <SourceLine>Preferences.TargetId = UUID.NewUUID</SourceLine>
+   <SourceLine>call Preferences.Save</SourceLine>
+   <SourceLine>end if</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>#if TargetWin32 or TargetLinux then</SourceLine>
+   <SourceLine>fTray = new AppTrayItem</SourceLine>
+   <SourceLine>fTray.HelpTag = "WinChatty Notifier"</SourceLine>
+   <SourceLine>if not self.AddTrayItem(fTray) then</SourceLine>
+   <SourceLine>dim dlg as new MessageDialog</SourceLine>
+   <SourceLine>dlg.Icon = MessageDialog.GraphicStop</SourceLine>
+   <SourceLine>dlg.Title = "WinChatty Notifier"</SourceLine>
+   <SourceLine>dlg.Message = "There was a problem creating the notification icon."</SourceLine>
+   <SourceLine>call dlg.ShowModal</SourceLine>
+   <SourceLine>Quit</SourceLine>
+   <SourceLine>end if</SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>#if TargetMacOS then</SourceLine>
+   <SourceLine>'TODO</SourceLine>
+   <SourceLine>#endif</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <HookInstance>
+  <ItemName>Close</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Sub Close()</SourceLine>
+   <SourceLine>if fTray &lt;&gt; nil then</SourceLine>
+   <SourceLine>self.RemoveTrayItem fTray</SourceLine>
+   <SourceLine>end if</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>End Sub</SourceLine>
+  </ItemSource>
+ </HookInstance>
+ <Property>
+  <ItemName>fTray</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>fTray As AppTrayItem</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>fTray As AppTrayItem</ItemDeclaration>
+  <ItemFlags>33</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
+ <PropertyVal Name="MenuBar"><Hex bytes="1">30</Hex></PropertyVal>
+ <ViewBehavior>
+ </ViewBehavior>
+ <Constant>
+  <ItemName>kFileQuitShortcut</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemName>kFileQuitShortcut</ItemName>
+  <ItemType>0</ItemType>
+  <ItemDef></ItemDef>
+  <ItemFlags>0</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>1</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Cmd+Q</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>5</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>Ctrl+Q</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kFileQuit</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemName>kFileQuit</ItemName>
+  <ItemType>0</ItemType>
+  <ItemDef>&amp;Quit</ItemDef>
+  <ItemFlags>0</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>2</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>E&amp;xit</ItemDef>
+  </ConstantInstance>
+ </Constant>
+ <Constant>
+  <ItemName>kEditClear</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemName>kEditClear</ItemName>
+  <ItemType>0</ItemType>
+  <ItemDef>&amp;Delete</ItemDef>
+  <ItemFlags>0</ItemFlags>
+  <ConstantInstance>
+   <ItemPlatform>2</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>&amp;Delete</ItemDef>
+  </ConstantInstance>
+  <ConstantInstance>
+   <ItemPlatform>5</ItemPlatform>
+   <ItemLanguage>0</ItemLanguage>
+   <ItemDef>&amp;Delete</ItemDef>
+  </ConstantInstance>
+ </Constant>
 </block>
 <block type="UIState" ID="0">
  <StudioWindowState>
@@ -548,9 +1078,9 @@
    <EditorCount>1</EditorCount>
    <Editor>
     <EditorIndex>0</EditorIndex>
-    <EditorLocation>AppTrayItem</EditorLocation>
+    <EditorLocation>App.Open</EditorLocation>
     <EditorPath></EditorPath>
-    <EditingPartID>2008113151</EditingPartID>
+    <EditingPartID>1535295487</EditingPartID>
    </Editor>
    <SelectedTab>0</SelectedTab>
   </Editors>
