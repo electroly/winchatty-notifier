@@ -40,15 +40,19 @@ namespace Notifier
 {
    public static class Program
    {
-      private sealed class Context : ApplicationContext
+      private sealed class NotifierContext : ApplicationContext
       {
          private readonly NotifyIcon _NotifyIcon = new NotifyIcon();
          private readonly Thread _Thread;
-         private readonly SynchronizationContext _SyncContext = new SynchronizationContext();
+         private readonly SynchronizationContext _SyncContext = new WindowsFormsSynchronizationContext();
          private readonly string _ClientId = SetupClientId();
+         private readonly OptionsForm _OptionsForm = new OptionsForm();
+         
+         // These are set when the bubble appears so that we have it when the user later clicks the bubble.
          private int _PostId;
+         private int _ThreadId;
 
-         public Context()
+         public NotifierContext()
          {
             try
             {
@@ -97,22 +101,24 @@ namespace Notifier
                   JToken errorToken;
                   if (response.TryGetValue("error", out errorToken))
                   {
-                     string code = (string)response["code"];
-                     if (code == "ERR_CLIENT_NOT_ASSOCIATED")
+                     Invoke(() =>
                      {
-                        Process.Start("https://winchatty.com/v2/notifications/ui/login?clientId="
-                           + _ClientId);
-                     }
-                     else
-                     {
-                        string errorMessage = (string)response["message"];
-                        Invoke(() =>
+                        string code = (string)response["code"];
+                        if (code == "ERR_CLIENT_NOT_ASSOCIATED")
                         {
+                           OpenNotificationsSetup();
+                           MessageBox.Show(
+                              "You must re-launch WinChatty Notifier after associating it with a Shacknews account.",
+                              "WinChatty Notifier", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                           string errorMessage = (string)response["message"];
                            MessageBox.Show(errorMessage, "WinChatty Notifier", MessageBoxButtons.OK, 
                               MessageBoxIcon.Error);
-                        });
-                     }
-                     Exit();
+                        }
+                        Exit();
+                     });
                      return;
                   }
 
@@ -122,16 +128,23 @@ namespace Notifier
                      string subject = (string)message["subject"];
                      string body = (string)message["body"];
                      int id = (int)message["postId"];
+                     int threadId = (int)message["threadId"];
 
                      Invoke(() =>
                      {
                         _PostId = id;
-                        _NotifyIcon.ShowBalloonTip(6000, subject, body, ToolTipIcon.None);
+                        _ThreadId = threadId;
+                        _NotifyIcon.ShowBalloonTip(1000 * Settings.Default.Duration, subject, body, ToolTipIcon.None);
                      });
                   }
                }
             }));
             _Thread.Start();
+         }
+
+         private void OpenNotificationsSetup()
+         {
+            Process.Start("https://winchatty.com/v2/notifications/ui/login?clientId=" + _ClientId);
          }
 
          private void SetupNotifyIcon()
@@ -141,9 +154,17 @@ namespace Notifier
             _NotifyIcon.ContextMenu = new ContextMenu(
                new[] 
                {
-                  new MenuItem("&Configure…", (sender, e) =>
+                  new MenuItem("&Setup notifications…", (sender, e) =>
                   {
-                     Process.Start("https://winchatty.com/v2/notifications/ui/login?clientId=" + _ClientId);
+                     OpenNotificationsSetup();
+                  }),
+                  new MenuItem("&Options…", (sender, e) =>
+                  {
+                     BeginInvoke(() =>
+                     {
+                        _OptionsForm.Show();
+                        _OptionsForm.BringToFront();
+                     });
                   }),
                   new MenuItem("&About WinChatty Notifier", (sender, e) =>
                   {
@@ -157,7 +178,29 @@ namespace Notifier
                });
             _NotifyIcon.BalloonTipClicked += (sender, e) =>
             {
-               Process.Start("http://www.shacknews.com/chatty?id=" + _PostId.ToString() + "#item_" + _PostId.ToString());
+               if (Settings.Default.LinkHandler == "Lamp")
+               {
+                  // Try to find Lamp.
+                  var possibleFilePaths = new[]
+                  {
+                     @"C:\Program Files (x86)\Lamp\Lamp.exe",
+                     @"C:\Program Files\Lamp\Lamp.exe"
+                  };
+                  string lampFilePath = possibleFilePaths.FirstOrDefault(x => File.Exists(x));
+                  if (lampFilePath == null)
+                  {
+                     MessageBox.Show("Unable to find Lamp.exe on disk.", "WinChatty Notifier", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                  }
+                  else
+                  {
+                     Process.Start(lampFilePath, string.Format("{0} {1}", _ThreadId, _PostId));
+                  }
+               }
+               else
+               {
+                  Process.Start("http://www.shacknews.com/chatty?id=" + _PostId.ToString() + "#item_" + _PostId.ToString());
+               }
             };
             _NotifyIcon.Visible = true;
          }
@@ -184,6 +227,11 @@ namespace Notifier
          private void Invoke(Action callback)
          {
             _SyncContext.Send(x => callback(), null);
+         }
+
+         private void BeginInvoke(Action callback)
+         {
+            _SyncContext.Post(x => callback(), null);
          }
 
          private void Exit()
@@ -242,7 +290,7 @@ namespace Notifier
       {
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
-         Application.Run(new Context());
+         Application.Run(new NotifierContext());
       }
    }
 }

@@ -22,5 +22,29 @@ namespace Notifier.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("WebBrowser")]
+        public string LinkHandler {
+            get {
+                return ((string)(this["LinkHandler"]));
+            }
+            set {
+                this["LinkHandler"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int Duration {
+            get {
+                return ((int)(this["Duration"]));
+            }
+            set {
+                this["Duration"] = value;
+            }
+        }
     }
 }
