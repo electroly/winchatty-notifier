@@ -34,6 +34,14 @@ namespace Notifier
       public OptionsForm()
       {
          InitializeComponent();
+         Reset();
+
+         _OKBtn.Click += (sender, e) => OnOkClicked();
+         _CancelBtn.Click += (sender, e) => Close();
+      }
+
+      private void Reset()
+      {
          switch (Settings.Default.LinkHandler)
          {
             case "WebBrowser":
@@ -45,9 +53,6 @@ namespace Notifier
                break;
          }
          _DurationUpd.Value = Settings.Default.Duration;
-
-         _OKBtn.Click += (sender, e) => OnOkClicked();
-         _CancelBtn.Click += (sender, e) => Close();
       }
 
       private void OnOkClicked()
@@ -70,6 +75,8 @@ namespace Notifier
       {
          if (e.CloseReason == CloseReason.UserClosing)
          {
+            Reset();
+            _OKBtn.Focus();
             Hide();
             e.Cancel = true;
          }
