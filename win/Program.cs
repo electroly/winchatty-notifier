@@ -291,7 +291,23 @@ namespace Notifier
       {
          Application.EnableVisualStyles();
          Application.SetCompatibleTextRenderingDefault(false);
-         Application.Run(new NotifierContext());
+
+         using (var mutex = new Mutex(false, "Global\\8CD3CDCC-723B-4E7C-9BC1-0251F79F08D0"))
+         {
+            bool acquired = false;
+
+            try
+            {
+               acquired = mutex.WaitOne(0, false);
+            }
+            catch (AbandonedMutexException)
+            {
+               acquired = true;
+            }
+            
+            if (acquired)
+               Application.Run(new NotifierContext());
+         }
       }
    }
 }
