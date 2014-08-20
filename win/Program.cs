@@ -199,7 +199,8 @@ namespace Notifier
                }
                else
                {
-                  Process.Start("http://www.shacknews.com/chatty?id=" + _PostId.ToString() + "#item_" + _PostId.ToString());
+                  Process.Start("http://www.shacknews.com/chatty?id=" + _PostId.ToString() + 
+                     "#item_" + _PostId.ToString());
                }
             };
             _NotifyIcon.Visible = true;
