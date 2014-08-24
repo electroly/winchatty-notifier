@@ -176,34 +176,44 @@ namespace Notifier
                      Exit();
                   })
                });
-            _NotifyIcon.BalloonTipClicked += (sender, e) =>
+            _NotifyIcon.BalloonTipClicked += (sender, e) => OpenPost();
+            _NotifyIcon.MouseClick += (sender, e) =>
             {
-               if (Settings.Default.LinkHandler == "Lamp")
-               {
-                  // Try to find Lamp.
-                  var possibleFilePaths = new[]
+               if (e.Button == MouseButtons.Left)
+                  OpenPost();
+            };
+            _NotifyIcon.Visible = true;
+         }
+
+         private void OpenPost()
+         {
+            if (_PostId <= 0)
+               return;
+
+            if (Settings.Default.LinkHandler == "Lamp")
+            {
+               // Try to find Lamp.
+               var possibleFilePaths = new[]
                   {
                      @"C:\Program Files (x86)\Lamp\Lamp.exe",
                      @"C:\Program Files\Lamp\Lamp.exe"
                   };
-                  string lampFilePath = possibleFilePaths.FirstOrDefault(x => File.Exists(x));
-                  if (lampFilePath == null)
-                  {
-                     MessageBox.Show("Unable to find Lamp.exe on disk.", "WinChatty Notifier", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                  }
-                  else
-                  {
-                     Process.Start(lampFilePath, string.Format("{0} {1}", _ThreadId, _PostId));
-                  }
+               string lampFilePath = possibleFilePaths.FirstOrDefault(x => File.Exists(x));
+               if (lampFilePath == null)
+               {
+                  MessageBox.Show("Unable to find Lamp.exe on disk.", "WinChatty Notifier",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                }
                else
                {
-                  Process.Start("http://www.shacknews.com/chatty?id=" + _PostId.ToString() + 
-                     "#item_" + _PostId.ToString());
+                  Process.Start(lampFilePath, string.Format("{0} {1}", _ThreadId, _PostId));
                }
-            };
-            _NotifyIcon.Visible = true;
+            }
+            else
+            {
+               Process.Start("http://www.shacknews.com/chatty?id=" + _PostId.ToString() +
+                  "#item_" + _PostId.ToString());
+            }
          }
 
          private static string SetupClientId()
