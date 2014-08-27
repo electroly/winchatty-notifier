@@ -49,13 +49,21 @@ namespace Notifier
       [return: MarshalAs(UnmanagedType.Bool)]
       private static extern bool SetForegroundWindow(IntPtr hWnd);
 
+      [return: MarshalAs(UnmanagedType.Bool)]
+      [DllImport("user32.dll", SetLastError = true)]
+      private static extern bool PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+      private const uint WM_USER = 0x0400;
       private const int SW_RESTORE = 9;
 
+      private const uint LAMP_WM_OPEN_POST_ID = (WM_USER + 119);
       private const string LAMP_WINDOW_CLASS = "Lamp - Shack Client";
 
       public static void OpenPost(int threadId, int postId)
       {
-         // Try to bring Lamp to the front if it's already running.
+         // If Lamp is already running, then talk to it directly by sending a Windows message.
+         // Otherwise, launch Lamp and pass the IDs on the command line.
+         
          var hWnd = FindWindow(LAMP_WINDOW_CLASS, null);
          if (hWnd != IntPtr.Zero)
          {
@@ -63,19 +71,22 @@ namespace Notifier
                ShowWindow(hWnd, SW_RESTORE);
 
             SetForegroundWindow(hWnd);
-         }
 
-         // Try to find Lamp on disk.
-         var possibleFilePaths = new[]
-                  {
-                     @"C:\Program Files (x86)\Lamp\Lamp.exe",
-                     @"C:\Program Files\Lamp\Lamp.exe"
-                  };
-         string lampFilePath = possibleFilePaths.FirstOrDefault(x => File.Exists(x));
-         if (lampFilePath == null)
-            throw new Exception("Unable to find Lamp.exe on disk.");
+            PostMessage(hWnd, LAMP_WM_OPEN_POST_ID, new IntPtr(threadId), new IntPtr(postId)); 
+         }
          else
-            Process.Start(lampFilePath, string.Format("{0} {1}", threadId, postId));
+         {
+            var possibleFilePaths = new[]
+                     {
+                        @"C:\Program Files (x86)\Lamp\Lamp.exe",
+                        @"C:\Program Files\Lamp\Lamp.exe"
+                     };
+            string lampFilePath = possibleFilePaths.FirstOrDefault(x => File.Exists(x));
+            if (lampFilePath == null)
+               throw new Exception("Unable to find Lamp.exe on disk.");
+            else
+               Process.Start(lampFilePath, string.Format("{0} {1}", threadId, postId));
+         }
       }
    }
 }
