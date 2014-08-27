@@ -192,21 +192,14 @@ namespace Notifier
 
             if (Settings.Default.LinkHandler == "Lamp")
             {
-               // Try to find Lamp.
-               var possibleFilePaths = new[]
-                  {
-                     @"C:\Program Files (x86)\Lamp\Lamp.exe",
-                     @"C:\Program Files\Lamp\Lamp.exe"
-                  };
-               string lampFilePath = possibleFilePaths.FirstOrDefault(x => File.Exists(x));
-               if (lampFilePath == null)
+               try
                {
-                  MessageBox.Show("Unable to find Lamp.exe on disk.", "WinChatty Notifier",
-                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                  LampUtil.OpenPost(_ThreadId, _PostId);
                }
-               else
+               catch (Exception ex)
                {
-                  Process.Start(lampFilePath, string.Format("{0} {1}", _ThreadId, _PostId));
+                  MessageBox.Show(ex.Message, "WinChatty Notifier",
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                }
             }
             else
