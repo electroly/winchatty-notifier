@@ -77,10 +77,10 @@ namespace Notifier
          else
          {
             var possibleFilePaths = new[]
-                     {
-                        @"C:\Program Files (x86)\Lamp\Lamp.exe",
-                        @"C:\Program Files\Lamp\Lamp.exe"
-                     };
+            {
+               @"C:\Program Files (x86)\Lamp\Lamp.exe",
+               @"C:\Program Files\Lamp\Lamp.exe"
+            };
             string lampFilePath = possibleFilePaths.FirstOrDefault(x => File.Exists(x));
             if (lampFilePath == null)
                throw new Exception("Unable to find Lamp.exe on disk.");
